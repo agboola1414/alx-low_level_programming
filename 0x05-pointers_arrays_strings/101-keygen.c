@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stddef.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -17,10 +16,9 @@ int main(void)
 	srand(time(0));
 	
 	while (sum < 2772)
-	
 	{
-		password[index] = 33 + rand() % 94;
-		sum += password[index++];
+	password[index] = 33 + rand() % 94;
+	sum += password[index++];
 	}
 	password[index] = '\0';
 
@@ -34,11 +32,12 @@ int main(void)
 
 		for (index = 0; password[index]; index++)
 		{
-			if password[index] >= (33 (diff_half1))
+			
+			if (password[index] >= (33 + diff_half1))
 			{
-				password[index] -= diff_half1;
-				
-				break;
+			password[index] -= diff_half1;
+
+	break;
 			}
 		}
 
@@ -47,12 +46,11 @@ int main(void)
 			if (password[index] >= (33 + diff_half2))
 			{
 				password[index] -= diff_half2;
-
+				
 				break;
 			}
 		}
 	}
-
 	printf("%s", password);
 	return (0);
-}i
+}
